@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Keranjang Belanja</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+    th { background: #f4f4f4; }
+    button { cursor: pointer; }
+    button.decrease, button.increase {
+      padding: 5px 12px; font-size: 16px; font-weight: bold;
+      border: 1px solid #aaa; border-radius: 4px; background: #fff;
+    }
+    button.decrease:hover, button.increase:hover { background: #eee; }
+    .qty { margin: 0 8px; font-size: 16px; font-weight: bold; }
+    .remove {
+      background: #ff4d4d; color: white; border: none;
+      padding: 6px 12px; border-radius: 4px;
+    }
+    .remove:hover { background: #e60000; }
+    .grand-total { margin-top: 20px; font-size: 18px; font-weight: bold; text-align: right; }
+    #checkout-btn {
+      margin-top: 20px; padding: 10px 20px;
+      background: #25D366; color: #fff; border: none; border-radius: 6px;
+      font-size: 16px; font-weight: bold;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    #checkout-btn:hover { background: #1ebe5d; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html">🧁 Sweet Cicigow Cupcake</a>
+  </header>
+
+  <main class="container">
+    <h1>Keranjang Belanja</h1>
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>Produk</th>
+          <th>Harga</th>
+          <th>Jumlah</th>
+          <th>Total</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <p class="grand-total">Total Keseluruhan: Rp<span id="grand-total">0</span></p>
+
+    <!-- Tombol Checkout WhatsApp -->
+    <button id="checkout-btn">📲 Checkout via WhatsApp</button>
+  </main>
+
+  <!-- Hubungkan ke file cart.js -->
+  <script src="js/cart.js"></script>
+</body>
+</html>
